@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import {FC,useState} from 'react';
 
  interface Siu {
   name: string;
@@ -8,6 +8,8 @@ import {FC} from 'react';
 }
 
 export const Person: FC<Siu> = ({name,email, age}) =>  {
+
+  const [country, setCountry] = useState<string | null>(null)
   return (
     <div> 
       <h2>Name: {name}</h2>
